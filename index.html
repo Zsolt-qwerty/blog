@@ -26,6 +26,8 @@
             color: #2f4f4f;
         }
 
+        /* testing divs
+        */
         div {
             border: 1px red dotted;
         }
@@ -35,33 +37,47 @@
 
 <body>
     
-    <div class="menubar">
+    <!-- <div class="menubar">
         <p></p>
-    </div>
-    
+    </div> -->
+
+    <script>
+
+        const tabs = ["Home", "About Me", "<", ">"];
+        const body = document.body;
+        // const menu = document.getElementsByClassName("menubar");
+        // menu.appendChild("x");
+        const menuDiv = document.createElement("div");
+        menuDiv.setAttribute("class", "menubar");
+        body.appendChild(menuDiv);
+
+        for (let i = 0; i < tabs.length; i++) {
+            const label = document.createElement("button");
+            label.textContent = tabs[i];
+            menuDiv.appendChild(label);
+        }
+
+        </script>
+
     <h1>My Blog</h1>
 
     <script>
 
-        const body = document.body;
+        const contentDiv = document.createElement("div");
+        contentDiv.setAttribute("class", "content");
+        body.appendChild(contentDiv);
 
-        // const menu = document.getElementsByClassName("menubar");
-        // menu.appendChild("x");
-
-        const panel = document.createElement("div");
-        panel.setAttribute("class", "msgBox");
-        body.appendChild(panel);
-
-        const msg = document.createElement("p");
-        msg.textContent = msgText;
-        panel.appendChild(msg);
 
         const closeBtn = document.createElement("button");
         closeBtn.textContent = "x";
-        panel.appendChild(closeBtn);
-
+        contentDiv.appendChild(closeBtn);
 
     </script>
+
+    <div id="content">
+        <p>date</p>
+        <p>text</p>
+    </div>
 
 </body>
 
