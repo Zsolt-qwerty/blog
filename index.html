@@ -53,6 +53,11 @@
 
         for (let i = 0; i < tabs.length; i++) {
             const label = document.createElement("button");
+            if (i == 2 || 3) {
+                label.setAttribute("id", tabs[i] + "Btn");
+            } else {
+                label.setAttribute("id", tabs[i]);
+            }
             label.textContent = tabs[i];
             menuDiv.appendChild(label);
         }
@@ -75,10 +80,15 @@
     </script>
 
     <div id="content">
-        <p>date</p>
-        <p>text</p>
+        <p id="logDate">date</p>
+        <p id="logText">text</p>
     </div>
 
+    <script>
+        const logDate = document.getElementById("logDate");
+        const logText = document.getElementById("logText");
+
+    </script>
 </body>
 
 </html>
