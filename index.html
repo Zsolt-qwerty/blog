@@ -43,6 +43,9 @@
 
     <script>
 
+        const datDate = ["25/11/2024","26/11/2024","27/11/2024"];
+        const datText = ["This is my very first entry and can't wait to tell you all about me!\nPlease follow for my daily adventures!","Wow, it's already the second input, we're flying here!\nToday was a great day and hopefully tomorrow will be even better!","Another day another great story here, where you get your daily adventure fix from\nToday I accomplished so much that I don't even know where to start!?"];
+
         const tabs = ["Home", "About Me", "<", ">"];
         const body = document.body;
         // const menu = document.getElementsByClassName("menubar");
@@ -87,6 +90,9 @@
     <script>
         const logDate = document.getElementById("logDate");
         const logText = document.getElementById("logText");
+        let choice = 0;
+        logDate.textContent = datDate[choice];
+        logText.textContent = datText[choice];
 
     </script>
 </body>
