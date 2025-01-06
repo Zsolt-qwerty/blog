@@ -4,97 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My blog</title>
-    <style>
-        html {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 16px;
-        }
-
-        body {
-            margin: 0 auto;
-            box-sizing: border-box;
-            color: #2f4f4f;
-            background-color: #f5f5dc;
-        }
-
-        a,
-        a:active,
-        a:link,
-        a:visited {
-            font-family: cursive;
-            text-decoration: none;
-            color: #2f4f4f;
-        }
-
-        /* testing divs
-        */
-        div {
-            border: 1px red dotted;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     
-    <!-- <div class="menubar">
-        <p></p>
-    </div> -->
-
-    <script>
-
-        const datDate = ["25/11/2024","26/11/2024","27/11/2024"];
-        const datText = ["This is my very first entry and can't wait to tell you all about me!\nPlease follow for my daily adventures!","Wow, it's already the second input, we're flying here!\nToday was a great day and hopefully tomorrow will be even better!","Another day another great story here, where you get your daily adventure fix from\nToday I accomplished so much that I don't even know where to start!?"];
-
-        const tabs = ["Home", "About Me", "<", ">"];
-        const body = document.body;
-        // const menu = document.getElementsByClassName("menubar");
-        // menu.appendChild("x");
-        const menuDiv = document.createElement("div");
-        menuDiv.setAttribute("class", "menubar");
-        body.appendChild(menuDiv);
-
-        for (let i = 0; i < tabs.length; i++) {
-            const label = document.createElement("button");
-            if (i == 2 || 3) {
-                label.setAttribute("id", tabs[i] + "Btn");
-            } else {
-                label.setAttribute("id", tabs[i]);
-            }
-            label.textContent = tabs[i];
-            menuDiv.appendChild(label);
-        }
-
-        </script>
+    <div id="menubar">
+        <button id="homeBtn"  class="navBtn">Home</button>
+        <button id="prevBtn"  class="navBtn"><</button>
+        <button id="nextBtn"  class="navBtn">></button>
+        <button id="aboutBtn" class="navBtn">About me</button>
+    </div>
 
     <h1>My Blog</h1>
 
-    <script>
-
-        const contentDiv = document.createElement("div");
-        contentDiv.setAttribute("class", "content");
-        body.appendChild(contentDiv);
-
-
-        const closeBtn = document.createElement("button");
-        closeBtn.textContent = "x";
-        contentDiv.appendChild(closeBtn);
-
-    </script>
-
     <div id="content">
-        <p id="logDate">date</p>
-        <p id="logText">text</p>
+        <p id="blogDate">date</p>
+        <p id="blogText">text</p>
     </div>
 
-    <script>
-        const logDate = document.getElementById("logDate");
-        const logText = document.getElementById("logText");
-        let choice = 0;
-        logDate.textContent = datDate[choice];
-        logText.textContent = datText[choice];
-
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
